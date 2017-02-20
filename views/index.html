@@ -37,9 +37,18 @@ controls: true
 
     }
     console.log("Run play_stream('/parts/prog_index.m3u8')");
+    
+    
+    $.ready(play_stream('/parts/prog_index.m3u8'));
+  
+    /*
+    Could also do:
+    
     <% if (user === 'Subscription user') { %>
     $.ready(play_stream('/parts/prog_index.m3u8'));
     <% } %>
+    
+    */
  
      
     </script>
