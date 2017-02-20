@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="jwplayer.js"></script>
+    <script> jwplayer.key="YS4xpgH6/2TvlkxzmcyourFpS9w0jKSbd8cRcA==";</script>
+    <!-- script THIS IS THE KEY USED BY SURFLINE> jwplayer.key="TN3oYtsYnZ+cHcCyMwo86x/W68fJWhtWt5w4mA==";</script -->
+    <script src="jwplayer.html5.js"></script>
+    
+
+  </head>
+<body>
+
+Hey <%= user %>    
+<div id="player"> </div>    
+
+
+<video width="352" height="198" controls>
+    <source src="/parts/prog_index.m3u8" type="application/x-mpegURL">
+</video>
+
+
+    <script type="text/javascript">
+    function play_stream(cameraStream) {
+        console.log("Got " + cameraStream);
+        jwplayer("player").setup({
+    	//primary: "html5",
+        file: cameraStream,
+primary: "flash",
+controls: true
+        });
+
+    }
+    console.log("Run play_stream('/parts/prog_index.m3u8')");
+    <% if (user === 'Subscription user') { %>
+    $.ready(play_stream('/parts/prog_index.m3u8'));
+    <% } %>
+ 
+     
+    </script>
+    
+</body>
+
+</html>        
+

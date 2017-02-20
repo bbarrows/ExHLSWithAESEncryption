@@ -1,0 +1,22 @@
+{
+  "name": "aesstreaming",
+  "version": "1.0.0",
+  "description": "Installing ffmpeg:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brad Barrows <bradleyb1537@gmail.com> (http://www.bbarrows.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^1.2.5",
+    "koa-generic-session": "^1.11.5",
+    "koa-router": "^5.4.0",
+    "koa-send": "^3.3.0",
+    "koa-session": "^3.4.0",
+    "koa-static": "^2.1.0",
+    "koa-userauth": "^1.4.0",
+    "koa-views": "^4.1.0",
+    "underscore": "^1.8.3"
+  }
+}
