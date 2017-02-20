@@ -1,3 +1,28 @@
+TO USE:
+
+Build ffmpeg with everything you need and download Apple's live streaming tools.
+
+Run ./stream.sh to start "live streaming" from whatever you symlink video.mk as. I just used a video as input because I don't have a live stream source to use.
+
+Run: 
+node index.js
+
+Goto localhost:3000
+
+to login goto:
+localhost:3000/login
+
+to logout goto 
+localhost:3000/logout
+
+After logging in or out go back to 
+localhost:3000 to see if the stream works.
+
+
+
+
+RANDOM NOTES:
+
 Installing ffmpeg:
 
 brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265 --with-libx264
