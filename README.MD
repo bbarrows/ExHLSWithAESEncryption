@@ -19,6 +19,28 @@ After logging in or out go back to
 localhost:3000 to see if the stream works.
 
 
+NETFLIX USES AES TOO?
+http://techblog.netflix.com/2013/04/html5-video-at-netflix.html
+
+It sounds like they have their own 
+
+Sounds like AES might be the best option (VS some new standard with PGP or something). You'd have to have a key for each user inserted into the m3u8 or something like that which would be probably not scale. 
+
+There will always be the "analog hole":
+
+The analog hole (also known as the analog loophole) is a fundamental and inevitable vulnerability in copy protection schemes for noninteractive works in digital formats which can be exploited to duplicate copy-protected works that are ultimately reproduced using analog means.
+
+https://en.wikipedia.org/wiki/Analog_hole
+
+
+Options:
+1. Encrypt streams (HLS + AES) Supported by Android/iOS/Desktop
+2. One encrypted stream for users, one possibly also encrypted stream with adds
+   inserted into stream with ffmpeg before streaming to CDN
+3. Minify/Obfuscate JS
+4. Different API/results for subscription users
+5. Worst case scenario - use some proprietary DRM solution over DASH
+
 
 
 RANDOM NOTES:
